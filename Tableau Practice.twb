@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0912.1023                               -->
+<workbook _.fcp.WorkbookFingerprinting.true...author-id='9d453d96703fa9d8a0acb6a0cf0aa1cfb7448a840e05c73aef2c96de42032d2b' _.fcp.WorkbookFingerprinting.true...creator-author-id='9d453d96703fa9d8a0acb6a0cf0aa1cfb7448a840e05c73aef2c96de42032d2b' _.fcp.WorkbookFingerprinting.true...creator-license-type='public' _.fcp.WorkbookFingerprinting.true...creator-machine-id='9d453d96703fa9d8a0acb6a0cf0aa1cfb7448a840e05c73aef2c96de42032d2b' _.fcp.WorkbookFingerprinting.true...license-type='public' _.fcp.WorkbookFingerprinting.true...machine-id='9d453d96703fa9d8a0acb6a0cf0aa1cfb7448a840e05c73aef2c96de42032d2b' original-version='18.1' source-build='2026.2.3 (20262.26.0912.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Customers+ (Tableau_Join_Practice_5_Tables)' inline='true' name='federated.05s5h9s1cbj3zq1fzmafa11k7f1j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Join_Practice_5_Tables' name='excel-direct.073gsf200d76bt19zfxwt1mp0g5q'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/BusinessComputers.in/Downloads/Tableau_Join_Practice_5_Tables.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Customers' table='[Customers$]' type='table'>
+            <columns gridOrigin='A1:C7:no:A1:C7:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Customer_ID' ordinal='0' />
+              <column datatype='string' name='Customer_Name' ordinal='1' />
+              <column datatype='string' name='City' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Orders' table='[Orders$]' type='table'>
+            <columns gridOrigin='A1:E9:no:A1:E9:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Order_ID' ordinal='0' />
+              <column datatype='integer' name='Customer_ID' ordinal='1' />
+              <column datatype='string' name='Order_Date' ordinal='2' />
+              <column datatype='integer' name='Product_ID' ordinal='3' />
+              <column datatype='integer' name='Quantity' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Payments' table='[Payments$]' type='table'>
+            <columns gridOrigin='A1:D8:no:A1:D8:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Payment_ID' ordinal='0' />
+              <column datatype='integer' name='Order_ID' ordinal='1' />
+              <column datatype='string' name='Payment_Method' ordinal='2' />
+              <column datatype='string' name='Payment_Status' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Products' table='[Products$]' type='table'>
+            <columns gridOrigin='A1:D7:no:A1:D7:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Product_ID' ordinal='0' />
+              <column datatype='string' name='Product_Name' ordinal='1' />
+              <column datatype='string' name='Category' ordinal='2' />
+              <column datatype='integer' name='Unit_Price' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Shipping' table='[Shipping$]' type='table'>
+            <columns gridOrigin='A1:D7:no:A1:D7:0' header='yes' outcome='6'>
+              <column datatype='integer' name='Shipping_ID' ordinal='0' />
+              <column datatype='integer' name='Order_ID' ordinal='1' />
+              <column datatype='string' name='Courier' ordinal='2' />
+              <column datatype='string' name='Shipping_Status' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Category]' value='[Products].[Category]' />
+          <map key='[City]' value='[Customers].[City]' />
+          <map key='[Courier]' value='[Shipping].[Courier]' />
+          <map key='[Customer_ID (Orders)]' value='[Orders].[Customer_ID]' />
+          <map key='[Customer_ID]' value='[Customers].[Customer_ID]' />
+          <map key='[Customer_Name]' value='[Customers].[Customer_Name]' />
+          <map key='[Order_Date]' value='[Orders].[Order_Date]' />
+          <map key='[Order_ID (Payments)]' value='[Payments].[Order_ID]' />
+          <map key='[Order_ID (Shipping)]' value='[Shipping].[Order_ID]' />
+          <map key='[Order_ID]' value='[Orders].[Order_ID]' />
+          <map key='[Payment_ID]' value='[Payments].[Payment_ID]' />
+          <map key='[Payment_Method]' value='[Payments].[Payment_Method]' />
+          <map key='[Payment_Status]' value='[Payments].[Payment_Status]' />
+          <map key='[Product_ID (Products)]' value='[Products].[Product_ID]' />
+          <map key='[Product_ID]' value='[Orders].[Product_ID]' />
+          <map key='[Product_Name]' value='[Products].[Product_Name]' />
+          <map key='[Quantity]' value='[Orders].[Quantity]' />
+          <map key='[Shipping_ID]' value='[Shipping].[Shipping_ID]' />
+          <map key='[Shipping_Status]' value='[Shipping].[Shipping_Status]' />
+          <map key='[Unit_Price]' value='[Products].[Unit_Price]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Customers]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C7:no:A1:C7:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E9:no:A1:E9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Payments]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D8:no:A1:D8:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Products]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D7:no:A1:D7:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Shipping]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D7:no:A1:D7:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer_ID]</local-name>
+            <parent-name>[Customers]</parent-name>
+            <remote-alias>Customer_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Customer_Name]</local-name>
+            <parent-name>[Customers]</parent-name>
+            <remote-alias>Customer_Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Customers]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order_ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order_ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Customer_ID (Orders)]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Customer_ID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_Date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Order_Date]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Order_Date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Product_ID]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Product_ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Orders]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Payment_ID]</local-name>
+            <parent-name>[Payments]</parent-name>
+            <remote-alias>Payment_ID</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order_ID (Payments)]</local-name>
+            <parent-name>[Payments]</parent-name>
+            <remote-alias>Order_ID</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment_Method</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Payment_Method]</local-name>
+            <parent-name>[Payments]</parent-name>
+            <remote-alias>Payment_Method</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Payment_Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Payment_Status]</local-name>
+            <parent-name>[Payments]</parent-name>
+            <remote-alias>Payment_Status</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Product_ID (Products)]</local-name>
+            <parent-name>[Products]</parent-name>
+            <remote-alias>Product_ID</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product_Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Product_Name]</local-name>
+            <parent-name>[Products]</parent-name>
+            <remote-alias>Product_Name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Products]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit_Price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unit_Price]</local-name>
+            <parent-name>[Products]</parent-name>
+            <remote-alias>Unit_Price</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Shipping_ID]</local-name>
+            <parent-name>[Shipping]</parent-name>
+            <remote-alias>Shipping_ID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order_ID (Shipping)]</local-name>
+            <parent-name>[Shipping]</parent-name>
+            <remote-alias>Order_ID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Courier</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Courier]</local-name>
+            <parent-name>[Shipping]</parent-name>
+            <remote-alias>Courier</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Shipping_Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Shipping_Status]</local-name>
+            <parent-name>[Shipping]</parent-name>
+            <remote-alias>Shipping_Status</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Customer ID (Orders)' datatype='integer' name='[Customer_ID (Orders)]' role='dimension' type='ordinal' />
+      <column caption='Customer ID' datatype='integer' name='[Customer_ID]' role='dimension' type='ordinal' />
+      <column caption='Customer Name' datatype='string' name='[Customer_Name]' role='dimension' type='nominal' />
+      <column caption='Order Date' datatype='string' name='[Order_Date]' role='dimension' type='nominal' />
+      <column caption='Order ID (Payments)' datatype='integer' name='[Order_ID (Payments)]' role='dimension' type='ordinal' />
+      <column caption='Order ID (Shipping)' datatype='integer' name='[Order_ID (Shipping)]' role='dimension' type='ordinal' />
+      <column caption='Order ID' datatype='integer' name='[Order_ID]' role='dimension' type='ordinal' />
+      <column caption='Payment ID' datatype='integer' name='[Payment_ID]' role='dimension' type='ordinal' />
+      <column caption='Payment Method' datatype='string' name='[Payment_Method]' role='dimension' type='nominal' />
+      <column caption='Payment Status' datatype='string' name='[Payment_Status]' role='dimension' type='nominal' />
+      <column caption='Product ID (Products)' datatype='integer' name='[Product_ID (Products)]' role='dimension' type='ordinal' />
+      <column caption='Product ID' datatype='integer' name='[Product_ID]' role='dimension' type='ordinal' />
+      <column caption='Product Name' datatype='string' name='[Product_Name]' role='dimension' type='nominal' />
+      <column caption='Shipping ID' datatype='integer' name='[Shipping_ID]' role='dimension' type='ordinal' />
+      <column caption='Shipping Status' datatype='string' name='[Shipping_Status]' role='dimension' type='nominal' />
+      <column caption='Unit Price' datatype='integer' name='[Unit_Price]' role='measure' type='quantitative' />
+      <column caption='Customers' datatype='table' name='[__tableau_internal_object_id__].[Customers_49B880267B7D471EB42FFC6A66D96629]' role='measure' type='quantitative' />
+      <column caption='Orders' datatype='table' name='[__tableau_internal_object_id__].[Orders_E26E2DEFE5D3458E921A216DC89E515D]' role='measure' type='quantitative' />
+      <column caption='Payments' datatype='table' name='[__tableau_internal_object_id__].[Payments_1DB302A3250F49E69E3414B7EEC11582]' role='measure' type='quantitative' />
+      <column caption='Products' datatype='table' name='[__tableau_internal_object_id__].[Products_289725C3B3524F7E901D326F45A3D3A1]' role='measure' type='quantitative' />
+      <column caption='Shipping' datatype='table' name='[__tableau_internal_object_id__].[Shipping_C2C53D9805A94685964E8B4EBFD22E86]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/BUSINE~1.IN/AppData/Local/Temp/TableauTemp/#TableauTemp_0hpv6s012nda6o11fd44c04bhy28.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='10/26/2026 07:05:38 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Customers_49B880267B7D471EB42FFC6A66D96629' table='[Extract].[Customers_49B880267B7D471EB42FFC6A66D96629]' type='table' />
+            <relation name='Orders_E26E2DEFE5D3458E921A216DC89E515D' table='[Extract].[Orders_E26E2DEFE5D3458E921A216DC89E515D]' type='table' />
+            <relation name='Payments_1DB302A3250F49E69E3414B7EEC11582' table='[Extract].[Payments_1DB302A3250F49E69E3414B7EEC11582]' type='table' />
+            <relation name='Products_289725C3B3524F7E901D326F45A3D3A1' table='[Extract].[Products_289725C3B3524F7E901D326F45A3D3A1]' type='table' />
+            <relation name='Shipping_C2C53D9805A94685964E8B4EBFD22E86' table='[Extract].[Shipping_C2C53D9805A94685964E8B4EBFD22E86]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Category]' value='[Products_289725C3B3524F7E901D326F45A3D3A1].[Category]' />
+            <map key='[City]' value='[Customers_49B880267B7D471EB42FFC6A66D96629].[City]' />
+            <map key='[Courier]' value='[Shipping_C2C53D9805A94685964E8B4EBFD22E86].[Courier]' />
+            <map key='[Customer_ID (Orders)]' value='[Orders_E26E2DEFE5D3458E921A216DC89E515D].[Customer_ID]' />
+            <map key='[Customer_ID]' value='[Customers_49B880267B7D471EB42FFC6A66D96629].[Customer_ID]' />
+            <map key='[Customer_Name]' value='[Customers_49B880267B7D471EB42FFC6A66D96629].[Customer_Name]' />
+            <map key='[Order_Date]' value='[Orders_E26E2DEFE5D3458E921A216DC89E515D].[Order_Date]' />
+            <map key='[Order_ID (Payments)]' value='[Payments_1DB302A3250F49E69E3414B7EEC11582].[Order_ID]' />
+            <map key='[Order_ID (Shipping)]' value='[Shipping_C2C53D9805A94685964E8B4EBFD22E86].[Order_ID]' />
+            <map key='[Order_ID]' value='[Orders_E26E2DEFE5D3458E921A216DC89E515D].[Order_ID]' />
+            <map key='[Payment_ID]' value='[Payments_1DB302A3250F49E69E3414B7EEC11582].[Payment_ID]' />
+            <map key='[Payment_Method]' value='[Payments_1DB302A3250F49E69E3414B7EEC11582].[Payment_Method]' />
+            <map key='[Payment_Status]' value='[Payments_1DB302A3250F49E69E3414B7EEC11582].[Payment_Status]' />
+            <map key='[Product_ID (Products)]' value='[Products_289725C3B3524F7E901D326F45A3D3A1].[Product_ID]' />
+            <map key='[Product_ID]' value='[Orders_E26E2DEFE5D3458E921A216DC89E515D].[Product_ID]' />
+            <map key='[Product_Name]' value='[Products_289725C3B3524F7E901D326F45A3D3A1].[Product_Name]' />
+            <map key='[Quantity]' value='[Orders_E26E2DEFE5D3458E921A216DC89E515D].[Quantity]' />
+            <map key='[Shipping_ID]' value='[Shipping_C2C53D9805A94685964E8B4EBFD22E86].[Shipping_ID]' />
+            <map key='[Shipping_Status]' value='[Shipping_C2C53D9805A94685964E8B4EBFD22E86].[Shipping_Status]' />
+            <map key='[Unit_Price]' value='[Products_289725C3B3524F7E901D326F45A3D3A1].[Unit_Price]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Customer_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer_ID]</local-name>
+              <parent-name>[Customers_49B880267B7D471EB42FFC6A66D96629]</parent-name>
+              <remote-alias>Customer_ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Customers</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer_Name]</local-name>
+              <parent-name>[Customers_49B880267B7D471EB42FFC6A66D96629]</parent-name>
+              <remote-alias>Customer_Name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Customers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Customers_49B880267B7D471EB42FFC6A66D96629]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Customers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Customers_49B880267B7D471EB42FFC6A66D96629]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Order_ID]</local-name>
+              <parent-name>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</parent-name>
+              <remote-alias>Order_ID</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Customer_ID (Orders)]</local-name>
+              <parent-name>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</parent-name>
+              <remote-alias>Customer_ID</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order_Date</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order_Date]</local-name>
+              <parent-name>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</parent-name>
+              <remote-alias>Order_Date</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Product_ID]</local-name>
+              <parent-name>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</parent-name>
+              <remote-alias>Product_ID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_E26E2DEFE5D3458E921A216DC89E515D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Payment_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Payment_ID]</local-name>
+              <parent-name>[Payments_1DB302A3250F49E69E3414B7EEC11582]</parent-name>
+              <remote-alias>Payment_ID</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Payments</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Order_ID (Payments)]</local-name>
+              <parent-name>[Payments_1DB302A3250F49E69E3414B7EEC11582]</parent-name>
+              <remote-alias>Order_ID</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Payments</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Payment_Method</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Payment_Method]</local-name>
+              <parent-name>[Payments_1DB302A3250F49E69E3414B7EEC11582]</parent-name>
+              <remote-alias>Payment_Method</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Payments</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Payment_Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Payment_Status]</local-name>
+              <parent-name>[Payments_1DB302A3250F49E69E3414B7EEC11582]</parent-name>
+              <remote-alias>Payment_Status</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Payments</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Payments_1DB302A3250F49E69E3414B7EEC11582]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Product_ID (Products)]</local-name>
+              <parent-name>[Products_289725C3B3524F7E901D326F45A3D3A1]</parent-name>
+              <remote-alias>Product_ID</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Products</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product_Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product_Name]</local-name>
+              <parent-name>[Products_289725C3B3524F7E901D326F45A3D3A1]</parent-name>
+              <remote-alias>Product_Name</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Products</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Products_289725C3B3524F7E901D326F45A3D3A1]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Products</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unit_Price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Unit_Price]</local-name>
+              <parent-name>[Products_289725C3B3524F7E901D326F45A3D3A1]</parent-name>
+              <remote-alias>Unit_Price</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Products</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Products_289725C3B3524F7E901D326F45A3D3A1]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Shipping_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Shipping_ID]</local-name>
+              <parent-name>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</parent-name>
+              <remote-alias>Shipping_ID</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Shipping</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Order_ID (Shipping)]</local-name>
+              <parent-name>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</parent-name>
+              <remote-alias>Order_ID</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Shipping</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Courier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Courier]</local-name>
+              <parent-name>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</parent-name>
+              <remote-alias>Courier</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Shipping</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Shipping_Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Shipping_Status]</local-name>
+              <parent-name>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</parent-name>
+              <remote-alias>Shipping_Status</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Shipping</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Shipping_C2C53D9805A94685964E8B4EBFD22E86]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Customers' id='Customers_49B880267B7D471EB42FFC6A66D96629'>
+            <properties context=''>
+              <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Customers' table='[Customers$]' type='table'>
+                <columns gridOrigin='A1:C7:no:A1:C7:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Customer_ID' ordinal='0' />
+                  <column datatype='string' name='Customer_Name' ordinal='1' />
+                  <column datatype='string' name='City' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Customers_49B880267B7D471EB42FFC6A66D96629' table='[Extract].[Customers_49B880267B7D471EB42FFC6A66D96629]' type='table' />
+            </properties>
+          </object>
+          <object caption='Orders' id='Orders_E26E2DEFE5D3458E921A216DC89E515D'>
+            <properties context=''>
+              <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Orders' table='[Orders$]' type='table'>
+                <columns gridOrigin='A1:E9:no:A1:E9:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Order_ID' ordinal='0' />
+                  <column datatype='integer' name='Customer_ID' ordinal='1' />
+                  <column datatype='string' name='Order_Date' ordinal='2' />
+                  <column datatype='integer' name='Product_ID' ordinal='3' />
+                  <column datatype='integer' name='Quantity' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Orders_E26E2DEFE5D3458E921A216DC89E515D' table='[Extract].[Orders_E26E2DEFE5D3458E921A216DC89E515D]' type='table' />
+            </properties>
+          </object>
+          <object caption='Payments' id='Payments_1DB302A3250F49E69E3414B7EEC11582'>
+            <properties context=''>
+              <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Payments' table='[Payments$]' type='table'>
+                <columns gridOrigin='A1:D8:no:A1:D8:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Payment_ID' ordinal='0' />
+                  <column datatype='integer' name='Order_ID' ordinal='1' />
+                  <column datatype='string' name='Payment_Method' ordinal='2' />
+                  <column datatype='string' name='Payment_Status' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Payments_1DB302A3250F49E69E3414B7EEC11582' table='[Extract].[Payments_1DB302A3250F49E69E3414B7EEC11582]' type='table' />
+            </properties>
+          </object>
+          <object caption='Products' id='Products_289725C3B3524F7E901D326F45A3D3A1'>
+            <properties context=''>
+              <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Products' table='[Products$]' type='table'>
+                <columns gridOrigin='A1:D7:no:A1:D7:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Product_ID' ordinal='0' />
+                  <column datatype='string' name='Product_Name' ordinal='1' />
+                  <column datatype='string' name='Category' ordinal='2' />
+                  <column datatype='integer' name='Unit_Price' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Products_289725C3B3524F7E901D326F45A3D3A1' table='[Extract].[Products_289725C3B3524F7E901D326F45A3D3A1]' type='table' />
+            </properties>
+          </object>
+          <object caption='Shipping' id='Shipping_C2C53D9805A94685964E8B4EBFD22E86'>
+            <properties context=''>
+              <relation connection='excel-direct.073gsf200d76bt19zfxwt1mp0g5q' name='Shipping' table='[Shipping$]' type='table'>
+                <columns gridOrigin='A1:D7:no:A1:D7:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Shipping_ID' ordinal='0' />
+                  <column datatype='integer' name='Order_ID' ordinal='1' />
+                  <column datatype='string' name='Courier' ordinal='2' />
+                  <column datatype='string' name='Shipping_Status' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Shipping_C2C53D9805A94685964E8B4EBFD22E86' table='[Extract].[Shipping_C2C53D9805A94685964E8B4EBFD22E86]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Customer_ID]' />
+              <expression op='[Customer_ID (Orders)]' />
+            </expression>
+            <first-end-point object-id='Customers_49B880267B7D471EB42FFC6A66D96629' />
+            <second-end-point object-id='Orders_E26E2DEFE5D3458E921A216DC89E515D' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Order_ID]' />
+              <expression op='[Order_ID (Payments)]' />
+            </expression>
+            <first-end-point object-id='Orders_E26E2DEFE5D3458E921A216DC89E515D' />
+            <second-end-point object-id='Payments_1DB302A3250F49E69E3414B7EEC11582' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Product_ID]' />
+              <expression op='[Product_ID (Products)]' />
+            </expression>
+            <first-end-point object-id='Orders_E26E2DEFE5D3458E921A216DC89E515D' />
+            <second-end-point object-id='Products_289725C3B3524F7E901D326F45A3D3A1' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Order_ID]' />
+              <expression op='[Order_ID (Shipping)]' />
+            </expression>
+            <first-end-point object-id='Orders_E26E2DEFE5D3458E921A216DC89E515D' />
+            <second-end-point object-id='Shipping_C2C53D9805A94685964E8B4EBFD22E86' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6EC18182-6E1D-482B-8769-58919F72CDEF}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0649CB8A-3E05-413B-B60E-408AA8BB47F6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
